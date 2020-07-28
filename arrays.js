@@ -34,4 +34,13 @@ everyOtherItem(['apple', 1, 'berry', 'cherry', 5, 10])
 // 3. smallestNItems
 function smallestNItems(items, n) {
   // Replace this with your code
+  
+  let sorted_items = items.sort((a,b) => a - b);
+
+  if (n < sorted_items.length) {
+    let sorted_n_items = sorted_items.slice(0, n);
+    console.log(sorted_n_items.reverse())
+  }
 }
+
+smallestNItems([1, 30, 4, 21, 100000], 3)
